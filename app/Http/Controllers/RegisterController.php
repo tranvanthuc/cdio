@@ -5,15 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\RegisterRequest;
 use App\User;
-use App\Specialization;
+use App\Major;
 use DateTime;
 
 class RegisterController extends Controller
 {
 	public function getRegister()
     {
-    	$listSpec = Specialization::all();
-    	return view('register', compact('listSpec'));
+    	// $listSpec = Major::all();
+    	return view('register');
     }
 
     public function postRegister(RegisterRequest $request)
